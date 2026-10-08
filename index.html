@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple To-Do App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="todo-app">
+    <h2>To-Do List 📝</h2>
+
+    <!-- Input Form -->
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="Add a new task..." autofocus required>
+      <button type="submit" id="add-btn">Add</button>
+    </form>
+
+    <!-- Tasks List -->
+    <ul id="todo-list"></ul>
+
+    <!-- Footer Counter and Clear -->
+    <div class="footer">
+      <span id="task-count">0 tasks left</span>
+      <button id="clear-btn">Clear All</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
