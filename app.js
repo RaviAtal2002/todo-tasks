@@ -28,7 +28,10 @@ function render() {
     li.innerHTML = `
       <input type="checkbox" ${task.completed ? 'checked' : ''} onchange="toggleTask(${index})">
       <span class="todo-text" onclick="toggleTask(${index})">${task.text}</span>
-      <button class="delete-btn" onclick="deleteTask(${index})">Delete</button>
+      <div class="actions">
+        <button class="edit-btn" onclick="editTask(${index})">Edit</button>
+        <button class="delete-btn" onclick="deleteTask(${index})">Delete</button>
+      </div>
     `;
 
     todoList.appendChild(li);
@@ -55,6 +58,15 @@ todoForm.addEventListener('submit', (e) => {
 window.toggleTask = function(index) {
   tasks[index].completed = !tasks[index].completed;
   saveAndRender();
+};
+
+// Edit a task
+window.editTask = function(index) {
+  const newText = prompt('Edit your task:', tasks[index].text);
+  if (newText !== null && newText.trim() !== '') {
+    tasks[index].text = newText.trim();
+    saveAndRender();
+  }
 };
 
 // Delete a single task

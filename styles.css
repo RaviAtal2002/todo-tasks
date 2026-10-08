@@ -100,6 +100,27 @@ body {
   color: #9ca3af;
 }
 
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.edit-btn {
+  background: #e0e7ff;
+  color: #4f46e5;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 9px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.edit-btn:hover {
+  background: #c7d2fe;
+}
+
 .delete-btn {
   background: #fee2e2;
   color: #ef4444;
